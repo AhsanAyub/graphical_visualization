@@ -1,0 +1,12 @@
+Y_as = [ 94.74 93.58 87.93 100; 94.96 95.45 91.29 100; 93.22 93.58 87.93 100 ] ;
+X_as = categorical({'K-NN', 'Decision Tree', 'Logistic Regression',});
+HB = bar(X_as , Y_as , 'group');
+l = cell(1,4);
+l{1}='Accuracy'; l{2}='F1'; l{3}='Precision'; l{4}='Recall';    
+legend(HB,l);
+ylabel('Percentage');
+xlabel('Classification Techniques');
+ylabel('Percentage', 'FontSize',10,'FontWeight','bold','FontName','Times New Roman');
+xlabel('Classification Techniques','FontSize',10,'FontWeight','bold','FontName','Times New Roman');
+grid on;
+title('Comparison of Evaluation for Applicatation Layer (DNS)','FontSize',12,'FontWeight','bold','FontName','Times New Roman');

@@ -1,0 +1,11 @@
+Y_as = [ 99.78 99.8 99.66 99.65; 87.51 87.68 95.47 81.07; 81.93 94.97 94.97 70.79 ] ;
+X_as = categorical({'SVM (Gaussian)', 'SVM (Linear Kernel)', 'Logistic Regression',});
+HB = bar(X_as , Y_as , 'group');
+l = cell(1,4);
+l{1}='Accuracy'; l{2}='F1'; l{3}='Precision'; l{4}='Recall';    
+legend(HB,l);
+ylabel('Percentage','FontSize',10,'FontWeight','bold','FontName','Times New Roman');
+xlabel('Classification Techniques','FontSize',10,'FontWeight','bold','FontName','Times New Roman');
+grid on;
+box on;
+title('Comparison of Evaluation for Network Layer (IPv4)','FontSize',12,'FontWeight','bold','FontName','Times New Roman');
