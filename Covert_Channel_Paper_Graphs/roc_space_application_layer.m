@@ -12,16 +12,20 @@ y=[lr_tpr knn_tpr j48_tpr];
 scatter(x, y, 'filled');
 axis([0 .5 .7 1]);
 
-text(lr_fpr, lr_tpr, 'A', 'horizontal','left', 'vertical','bottom');
-text(knn_fpr, knn_tpr, 'B', 'horizontal','left', 'vertical','bottom');
-text(j48_fpr, j48_tpr, 'C', 'horizontal','right', 'vertical','bottom');
+text(lr_fpr, lr_tpr, 'A', 'horizontal','left', 'vertical','bottom', 'FontSize',22,'FontWeight','bold','FontName','Times New Roman');
+text(knn_fpr, knn_tpr, 'B', 'horizontal','left', 'vertical','bottom', 'FontSize',22,'FontWeight','bold','FontName','Times New Roman');
+text(j48_fpr, j48_tpr, 'C', 'horizontal','right', 'vertical','bottom', 'FontSize',22,'FontWeight','bold','FontName','Times New Roman');
 
 box on;
 grid on;
 
-ylabel('True Positive Rates', 'FontSize',10,'FontWeight','bold','FontName','Times New Roman');
-xlabel('False Positive Rates', 'FontSize',10,'FontWeight','bold','FontName','Times New Roman');
-title('ROC Space for Application Layer (DNS)','FontSize',12,'FontWeight','bold','FontName','Times New Roman');
+ylabel('True Positive Rates', 'FontSize',20,'FontWeight','bold','FontName','Times New Roman');
+xlabel('False Positive Rates', 'FontSize',20,'FontWeight','bold','FontName','Times New Roman');
+ax = gca;
+ax.FontSize = 16; 
+ax.FontWeight = 'bold';
+ax.FontName = 'Times New Roman';
+%title('ROC Space for Application Layer (DNS)','FontSize',12,'FontWeight','bold','FontName','Times New Roman');
 dim = [0.2 0.5 0.3 0.3];
 str = {'A = Logistic Regression', 'B = K-NN', 'C = Decision Tree'};
-annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',10,'FontName','Times New Roman');
+annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',20,'FontWeight', 'bold','FontName','Times New Roman');
