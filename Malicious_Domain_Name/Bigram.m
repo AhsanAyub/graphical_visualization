@@ -4,6 +4,7 @@ HB = bar(X_as , Y_as , 'group');
 l = cell(1,4);
 l{1}='Accuracy'; l{2}='F1'; l{3}='Precision'; l{4}='Recall';    
 legend(HB,l);
+ylim([40 100])
 ylabel('Percentage','FontSize',20,'FontWeight','bold','FontName','Times New Roman');
 xlabel('Classification Techniques','FontSize',20,'FontWeight','bold','FontName','Times New Roman');
 grid on;
@@ -12,10 +13,4 @@ ax = gca;
 ax.FontSize = 20; 
 ax.FontWeight = 'bold';
 ax.FontName = 'Times New Roman';
-title('Comparison of Evaluation using Bigram','FontSize',24,'FontWeight','bold','FontName','Times New Roman');
-
-%x1=[1 3  5];x2=[2 4 6];
-%y1=[3  1  5];y2=[4  3  3]
-%bar_widh=0.2;
-%bar(x1,y1,bar_widh,'r');hold on; bar(x2,y2,bar_widh,'g')
-%hold on;plot(x1,y1,'b');hold on; plot(x2,y2,'m')
+title('Comparison of Evaluation using BOW (n=2)','FontSize',24,'FontWeight','bold','FontName','Times New Roman');
