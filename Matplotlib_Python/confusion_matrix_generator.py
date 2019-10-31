@@ -70,12 +70,12 @@ def plot_confusion_matrix(cm,
 
     plt.tight_layout()
     plt.ylabel('Actual Class',fontsize=20)
-    plt.xlabel('Predicted label\nAccuracy={:0.3f}; Misclass={:0.3f}'.format(accuracy, misclass),fontsize=20)
+    plt.xlabel('Predicted Class\nAccuracy={:0.3f}; Misclass={:0.3f}'.format(accuracy, misclass),fontsize=20)
     plt.show()
     plt.savefig('Confusion_Matrix.png', bbox_inches='tight', dpi=600)
 
-plot_confusion_matrix(cm = np.array([[ 1827,  5],
-                                    [  4,  1812]]), 
+plot_confusion_matrix(cm = np.array([[ 109704,  542],
+                                    [  474,  79079]]), 
                       normalize    = False,
                       target_names = ['Normal', 'Attack'],
                       title        = "Confusion Matrix")
